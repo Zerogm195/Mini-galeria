@@ -1,8 +1,17 @@
 async function obtenerDatos() {
     const datos = await fetch("http://127.0.0.1:8000/");
-    console.log(datos.json());
+    const datosjson = await datos.json();
+
+    let galeria = document.getElementById("galeria")
+
+    for (const imagen of datosjson.imagenes){
+            console.log(imagen);
+            
+            galeria.innerHTML += `<img src="assets/img/${imagen}">`
+        }
+        
+    };
        
-}
 
 obtenerDatos()
 

@@ -1,14 +1,16 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import json
+import listararchivos
 
-#Por cada imagen
 
 app = FastAPI()
 
 @app.get("/")
-def leerJson():
-    with open("data.json", "r") as f:
+async def leerJson():
+    listararchivos.obtenerDatos()
+
+    with open(listararchivos.ruta_json, "r") as f:
         datos = json.load(f)
 
         return datos

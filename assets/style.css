@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(36, 36, 36);
+    margin: 0;
+    padding: 20px;
+}
+
+#galeria {
+    min-height: 20%;
+    display: flex;
+    flex-wrap: wrap; /* Para que las imágenes se ajusten */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 6%); /* Fondo semi-transparente */
+    position: relative; /* Cambiado de absolute para mejor layout */
+}
+
+#galeria img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px; /* También podemos redondear las imágenes */
+}
+
+#texto{
+
+    display: flex;
+    font-family: sans-serif;
+    color: white;
+    font-size: 2rem;
+    justify-content: center;
+    text-shadow: 5px 3px black;
+
+}
